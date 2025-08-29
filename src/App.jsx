@@ -1,3 +1,4 @@
+import Header from "./components/header/index.jsx";
 import Sidebar from "./components/sidebar/index.jsx";
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
     <div className="dashboard-layout">
       <Sidebar />
       <main className="dashboard-content">
-        <h1>Dashboard</h1>
+        <Header />
         <p>Welcome to your dashboard!</p>
         {/* Add your main content here */}
       </main>

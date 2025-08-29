@@ -1,8 +1,9 @@
-.hello {
-  background-color: aquamarine;
-  height: 100vh;
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-@import "./components/sidebar/sidebar.scss";
 .dashboard-layout {
   display: flex;
   height: 100vh;
@@ -10,7 +11,7 @@
 
 .dashboard-content {
   flex: 1;
-  padding: 2rem;
+  padding: 2px;
   background: #f8f9fa;
   overflow-y: auto;
 }
