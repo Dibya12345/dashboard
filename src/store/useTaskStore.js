@@ -10,6 +10,10 @@ export const useTaskStore = create((set, get) => ({
     subject: "",
   },
 
+  getCurrentData: () => {
+    return task_data;
+  },
+
   setFilter: (key, value) =>
     set((state) => ({
       filters: { ...state.filters, [key]: value },

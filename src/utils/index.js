@@ -48,10 +48,10 @@ export const task_stats = [
 
 export const tabs = [
   { name: "All Tasks", count: 58 },
-  { name: "Completed Tasks" },
+  { name: "Completed Tasks", count: 8 },
   { name: "Pending Tasks", count: 50 },
   { name: "Overdue Tasks", count: 50 },
-  { name: "SLA", count: "" },
+  { name: "SLA", count: 0 },
 ];
 
 export const task_data = [
@@ -62,7 +62,7 @@ export const task_data = [
     title: "test task",
     status: "Canceled",
     priority: "Medium",
-    type: "",
+    type: "Feature",
     description: "This is a test task by fiza rashid",
     statusColor: "#f44336",
   },
@@ -73,7 +73,7 @@ export const task_data = [
     title: "test ticket for account care",
     status: "Completed",
     priority: "Low",
-    type: "",
+    type: "Feature",
     description: "This is a test ticket",
     statusColor: "#4caf50",
   },
@@ -84,7 +84,7 @@ export const task_data = [
     title: "Hello",
     status: "Completed",
     priority: "Medium",
-    type: "",
+    type: "Feature",
     description: "aassfasdf",
     statusColor: "#4caf50",
   },
@@ -95,7 +95,7 @@ export const task_data = [
     title: "StatusInterface",
     status: "Pending",
     priority: "Medium",
-    type: "",
+    type: "investigation",
     description: "aasdfasf",
     statusColor: "#ff9800",
   },
@@ -106,7 +106,7 @@ export const task_data = [
     title: "as test",
     status: "Pending",
     priority: "Critical",
-    type: "",
+    type: "bug",
     description: "orld",
     statusColor: "#ff9800",
   },

@@ -7,10 +7,11 @@ import TaskFilters from "./dashboard_ui/TaskFilters";
 import TaskActions from "./dashboard_ui/TaskActions";
 import TaskTable from "./dashboard_ui/TaskTable";
 import { useTaskStore } from "../../store/useTaskStore";
+import TaskNotFound from "../NotFound";
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("All Tasks");
-  const getFilteredTasks = useTaskStore((state) => state.getFilteredTasks);
+  const { getFilteredTasks } = useTaskStore();
   const filteredTasks = getFilteredTasks();
 
   return (
@@ -35,10 +36,17 @@ export default function Dashboard() {
           </div>
 
           {/* Table */}
-          <TaskTable
-            tasks={filteredTasks}
-            getPriorityColor={getPriorityColor}
-          />
+          {filteredTasks.length === 0 ? (
+            <TaskNotFound
+              searchTerm={"Hello"}
+              isSearching={true}
+            />
+          ) : (
+            <TaskTable
+              tasks={filteredTasks}
+              getPriorityColor={getPriorityColor}
+            />
+          )}
         </div>
       </div>
     </div>
